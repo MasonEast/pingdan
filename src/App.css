@@ -1,0 +1,30 @@
+.header {
+  text-align: center;
+}
+.header_btn {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background: blue;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 50%;
+  line-height: 100px;
+  cursor: pointer;
+}
+.header_btn:hover {
+  background: red;
+}
+.app_body {
+  display: flex;
+  justify-content: space-around;
+}
+.attend_span {
+  margin: 0 10px;
+}
+.attend_header_span {
+  margin: 0 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
