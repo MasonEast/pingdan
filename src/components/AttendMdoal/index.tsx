@@ -22,7 +22,9 @@ export default function AttendModal({
             },
           ];
         }
-        arr[index]["attenders"].push(v);
+        arr[index]["attenders"]
+          ? arr[index]["attenders"].push(v)
+          : (arr[index]["attenders"] = [v]);
         return arr;
       });
       setModalVisible(false);
@@ -40,11 +42,11 @@ export default function AttendModal({
       onOk={handleOk}
       onCancel={handleCancel}
     >
-      <Form form={form}>
-        <Form.Item label="参与人" name="attender">
+      <Form form={form} labelCol={{ span: 6 }} wrapperCol={{ span: 14 }}>
+        <Form.Item label="参与人" name="attender" rules={[{ required: true }]}>
           <Input />
         </Form.Item>
-        <Form.Item label="拼单数量" name="num">
+        <Form.Item label="拼单数量" name="num" rules={[{ required: true }]}>
           <InputNumber />
         </Form.Item>
       </Form>
