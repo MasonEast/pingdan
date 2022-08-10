@@ -4,6 +4,7 @@ export default function AttendModal({
   modalVisible,
   setModalVisible,
   setOrders,
+  setForceUpdate,
   order,
 }: any) {
   const [form] = Form.useForm();
@@ -27,6 +28,7 @@ export default function AttendModal({
           : (arr[index]["attenders"] = [v]);
         return arr;
       });
+      setForceUpdate({});
       setModalVisible(false);
     });
   };
